@@ -3,7 +3,9 @@ import Comp from './Comp';
 
 async function init() {
   await Promise.resolve();
-  console.log(React.renderToStaticMarkup(<Comp className='spam' foo='bar' />));
+  const root = document.createElement('div');
+  document.body.appendChild(root);
+  React.render(<Comp className='spam' foo='bar' />, root);
 }
 
 init().catch(err => {

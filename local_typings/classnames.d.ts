@@ -1,9 +1,9 @@
 interface ClassDictionary {
-	[id: string]: boolean;
+  [id: string]: boolean;
 }
 
 interface ClassNamesFn {
-	(...classes: (string | ClassDictionary)[]): string;
+  (...classes: (string | ClassDictionary)[]): string;
 }
 
 declare var classNames: ClassNamesFn;

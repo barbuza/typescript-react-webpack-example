@@ -1,5 +1,11 @@
+var WebpackHtmlPlugin = require('webpack-html-plugin');
+
 module.exports = {
-  entry: './src/index.tsx',
+  entry: [
+    'webpack-dev-server/client?http://127.0.0.1:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.tsx',
+  ],
   output: {
     filename: 'bundle.js',
     path: 'build'
@@ -10,11 +16,14 @@ module.exports = {
   },
   module: {
     loaders: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loaders: ['babel', 'ts'] }
+      { test: /\.styl$/, loaders: ['style', 'css?module&importLoaders=1&localIdentName=[hash:base64:5]', 'stylus'] },
+      { test: /\.tsx?$/, loaders: ['react-hot', 'component-css?ext=styl&varName=styles', 'babel', 'ts'] }
     ]
   },
   ts: {
     compiler: 'typescript'
-  }
+  },
+  plugins: [
+    new WebpackHtmlPlugin()
+  ]
 }
