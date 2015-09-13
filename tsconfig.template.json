@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "experimentalAsyncFunctions": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "jsx": "react",
+    "target": "es6"
+  }
+}

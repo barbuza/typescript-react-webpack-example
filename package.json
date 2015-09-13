@@ -1,0 +1,19 @@
+{
+  "name": "tsr-testtypescript-react-webpack-example",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "webpack -c --bail",
+    "postinstall": "tsd install && node updateTsConfig"
+  },
+  "dependencies": {
+    "babel-core": "^5.8.24",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.24",
+    "glob": "^5.0.14",
+    "react": "^0.13.3",
+    "ts-loader": "^0.5.5",
+    "tsd": "^0.6.4",
+    "typescript": "^1.6.0-beta",
+    "webpack": "^1.12.1"
+  }
+}

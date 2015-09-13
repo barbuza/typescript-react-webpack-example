@@ -1,0 +1,11 @@
+{
+  "search.exclude": {
+    ".git": true,
+    "node_modules": true,
+    "build": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
